@@ -47,7 +47,9 @@ Esses dados ajudam a definir o perfil do usuário, permitindo que o TikTok ofere
     \item \textbf{Idade}: a idade é coletada durante o processo de registro, onde o usuário precisa fornecer sua data de nascimento. O TikTok, por motivos legais e para a criação de uma experiência apropriada à faixa etária, é solicitar essa informação.
     \item \textbf{Gênero}: o gênero é coletado no momento do registro, quando o usuário é solicitado a fornecer essa informação de forma opcional. Essa coleta é muitas vezes realizada por meio de uma caixa de seleção (masculino, feminino, outro) ou pode ser inferida a partir do nome de usuário, fotos e outros dados, embora essa prática possa ser limitada em algumas regiões.
     \item \textbf{Localização Geográfica}: a localização do usuário é coletada por meio de dados de geolocalização do dispositivo, quando o usuário dá permissão para o TikTok acessar a sua localização. Isso pode ser feito por meio do GPS do celular, o endereço IP ou Wi-Fi utilizado.
-    \item \textbf{Idioma}: o idioma é coletado diretamente do dispositivo, pois a maioria dos dispositivos móveis define o idioma de exibição com base nas configurações de idioma do sistema
+    \item \textbf{Idioma}: o idioma é coletado diretamente do dispositivo, pois a maioria dos dispositivos móveis define o idioma de exibição com base nas configurações de idioma do sistema;
+    
+    \newpage
     \item \textbf{E-mail}: O e-mail é geralmente coletado no momento do registro ou criação da conta, onde o usuário é solicitado a fornecer um endereço de e-mail válido. O TikTok pode pedir ao usuário para verificar o e-mail, enviando um código de confirmação para garantir que a conta seja associada a um e-mail legítimo.
     \item \textbf{Número de Telefone}: O número de telefone é solicitado como uma opção durante o processo de registro ou de verificação de conta. O TikTok pode pedir ao usuário para fornecer o número de telefone para ativar uma camada extra de segurança, ou para possibilitar a recuperação de conta em caso de problemas com a senha. A verificação do número é realizada através de um código enviado por SMS.
     \item \textbf{Senha}: A senha é criada pelo usuário durante o processo de registro, onde ele escolhe uma senha pessoal para proteger a conta. O TikTok exige que a senha tenha um nível mínimo de complexidade (como uma combinação de letras, números e caracteres especiais) para aumentar a segurança.
@@ -57,38 +59,114 @@ Esses dados ajudam a definir o perfil do usuário, permitindo que o TikTok ofere
 
 \subsection{Dados de Postagem}
 
-Vídeos, Curtidas, Comentários, Compartilhamentos, Tempo de Visualização, Buscas Realizadas, Seguidores, Visitas no Perfil; 
+Os dados de postagem no TikTok são fundamentais para o funcionamento do algoritmo de recomendação e para medir o engajamento de um usuário com o conteúdo na plataforma. Aqui está uma explicação detalhada de como cada tipo de dado é coletado e utilizado:
 
-
-
-
-
-
-
-
-
-
-
-
+\begin{itemize}
+    \item \textbf{Videos}: Cada vez que o usuário publica um vídeo, o TikTok coleta informações sobre o vídeo, como o conteúdo visual, áudio, hashtags, legendas, e efeitos aplicados. Além disso, o algoritmo rastreia como o vídeo é recebido pelos outros usuários (curtidas, comentários, compartilhamentos, etc.);
+    \item \textbf{Curtidas}: O TikTok registra todas as curtidas que um vídeo recebe, assim como as curtidas feitas pelos usuários nos vídeos de outros. Cada vez que o usuário clica no ícone de "curtir" em um vídeo, esse dado é coletado;
+    \item \textbf{Comentários}: O TikTok coleta os comentários feitos nos vídeos, bem como os comentários feitos por um usuário em vídeos de outras pessoas. Isso inclui o texto dos comentários e a interação com esses conteúdos;
+    \item \textbf{Compratilhamento}: O TikTok registra todas as vezes que um vídeo é compartilhado. Isso inclui o compartilhamento dentro da própria plataforma (enviar para amigos, grupos, etc.) e para fora da plataforma (compartilhar em outras redes sociais ou via mensagem);
+    \item \textbf{Tempo de Visualização}: O TikTok monitora quanto tempo um usuário passa assistindo a cada vídeo. Isso inclui o tempo total de visualização e se o usuário assistiu ao vídeo inteiro ou pulou partes dele. Esses dados são coletados automaticamente enquanto o vídeo é exibido;
+    \item  \textbf{Buscas Realizadas}: O TikTok coleta as pesquisas realizadas pelos usuários dentro da plataforma, incluindo termos de busca, usuários seguidos, hashtags, músicas e conteúdos específicos;
+    \item \textbf{Seguidores}: O TikTok registra o número de seguidores de cada usuário, assim como as interações dos usuários com os perfis de outros, como o ato de seguir ou deixar de seguir;
+    \item  \textbf{Visitas no Perfil}: O TikTok rastreia o número de visitas que um perfil recebe. Isso inclui as visitas feitas por pessoas que já seguem o usuário e por aquelas que não seguem, além de monitorar se o perfil é visitado frequentemente ou esporadicamente.
+\end{itemize}
 
 
 
 \newpage
 \subsection{Processos do Sistema}
 
+O sistema do TikTok transforma entradas (dados de usuários e conteúdo) em saídas (recomendações personalizadas, feed ajustado e ações realizadas na plataforma) por meio de um conjunto de processos complexos que envolvem algoritmos, ferramentas e infraestrutura tecnológica. \vskip0.3cm
+
+O TikTok realiza diversos processos internos para transformar entradas em saídas:
+
+\begin{itemize}
+    \item \textbf{Processamento e Armazenamento de Dados}: o algoritmo de recomendação processa dados de uso em tempo real utilizando ferramentas de Big Data e Armazenamento em Nuvem, identificando padrões de comportamento e preferências dos usuários.
+    \item \textbf{Classificação de Conteúdo}: os vídeos são analisados utilzando Redes Neurais Profundas, com base em hashtags, tendências e elementos visuais para categorização e promoção.
+    \item \textbf{Personalização e Recomendações}: o feed “For You” é ajustado continuamente para apresentar conteúdo relevante para cada usuário, usando redes neurais recorrentes para prever o interesse de um usuário em cada vídeo.
+    \item \textbf{Moderação de Conteúdo}: Processos de verificação automática e humana são usados para identificar e remover conteúdo inadequado ou que viole os termos da plataforma.
+    \item \textbf{Otimização Técnica}: Melhorias de desempenho do aplicativo, como tempo de carregamento e estabilidade.
+\end{itemize}
+
+
 \newpage
 \subsection{Saídas (Outpus) do Sistema}
 
+\subsection{Monetização}
+\subsubsection{Requesitos para Monetização}
 
-\newpage
+Os principais requisitos para a monetização no Tiktok.
+
+\begin{enumerate}
+    \item \textbf{Idade Mínima de 18 Anos}: Para participar do programa demonetização do TikTok, énecessário ter pelo menos 18anos de idade. Isso garanteque os usuários sejamlegalmente capazes degerenciar seus ganhos ecumprir com as obrigaçõesfiscais associadas;
+    \item \textbf{10 Mil Seguidores}: Umn úmero significativo deseguidores é essencial paragarantir que seu conteúdoalcance uma audiência ampla eengajada. Com 10 milseguidores, você demonstrauma base sólida de apoio einteresse em seu conteúdo,tornando-o elegível para amonetização;
+    \item \textbf{100 Mil Views nos Últimos 30 Dias}: Além de terseguidores, é crucial que seu conteúdo sejavisualizado por um grande número de pessoas.Alcançar 100 mil views nos últimos 30 dias indica queseu conteúdo é popular e tem potencial para gerarreceita por meio de anúncios e outras oportunidadesde monetização;
+    \item \textbf{Vídeos com Mais de Um Minuto de Duração}: Paraserem qualificados para a monetização através doprograma criativo do TikTok, seus vídeos precisam teruma duração mínima de um minuto. Isso garante queseu conteúdo tenha espaço suficiente para atrair ereter a atenção do público, aumentando suas chancesde gerar receita Após cumprir esses requisitos, você estaráqualificado para solicitar a entrada no programa demonetização do TikTok. Este processo envolvepreencher algumas informações fiscais e aguardar aaprovação do TikTok.Uma vez aprovado, você estará pronto para começara monetizar seu conteúdo e dar o próximo passo emsua jornada de criação de conteúdo online.
+    \end{enumerate}
+
+
+\subsubsection{Tipos para Monetização}
+
+\begin{enumerate}
+    \item \textbf{Programa de monetização TikTok Creator Fund}: Os criadores podem ganhar dinheiro com o TikTok por meio do Creator Fund, um fundo de monetização para criadores com pelo menos 100.000 visualizações em 30 dias. O pagamento varia com base no desempenho dos vídeos.
+
+\item \textbf{Convide Seus Amigos}: Um dos meios mais comuns de faturar uma grana no TikTok é convidar os seus amigos para ingressar na plataforma — estratégia da própria empresa para expandir o seu número de inscritos. Quanto mais pessoas conseguir levar para o TikTok, mais moedas você ganha, e elas podem ser trocadas por recompensas em dinheiro.
+
+\item \textbf{Cumpra Missões Diárias}: O TikTok permite que você cumpra missões diárias para ganhar rubis, pontos que podem ser trocados por dinheiro ou benefícios. Cada unidade de rubi equivale a R\$ 0,00001. Por exemplo, se você acumular 10 mil rubis, poderá embolsar o equivalente a R\$ 1.
+
+\item \textbf{Lives}:
+Você pode fazer lives no TikTok e ganhar moedas com base no tempo de transmissão, podendo arrecadar mais de mil rubis se o seu vídeo durar aproximadamente meia hora — tempo recomendado pela própria rede social.
+
+
+\item \textbf{Afiliados}: Você pode usar link de afiliados para monetizar o TikTok, inserindo endereços clicáveis em seus vídeos e na sua bio — no melhor estilo Instagram. Esses links podem redirecionar para sites de vendas de produtos, serviços e demais categorias que se encaixem no programa de afiliados do TikTok e possam render alguma comissão.
+
+\end{enumerate}
+
+
+
+
+Após cumprir esses requisitos, o usuário estará qualificado para solicitar a entrada no \textbf{Programa de Monetização} do Tiktok. Este Processo envolve prencher algumas informações fiscais e aguardar a aprovação do Tiktok.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{SubSistemas}
 
 O algoritmo de recomendação do TikTok é um dos elementos centrais para sua popularidade global. Ele utiliza uma combinação de dados de engajamento, preferências dos usuários, informações do conteúdo e desempenho inicial para oferecer um feed personalizado. Cada interação do usuário, como curtidas, comentários e compartilhamentos, contribui para a identificação de interesses específicos. As preferências também são refinadas com base no tipo de conteúdo assistido e no tempo de visualização. Além disso, o algoritmo valoriza conteúdos originais e relevantes para tendências atuais, utilizando metadados como hashtags e descrições para categorização. Vídeos recém-publicados passam por testes iniciais com públicos pequenos antes de serem amplamente distribuídos, dependendo do engajamento gerado. A frequência de publicação e a consistência na qualidade do conteúdo também influenciam na visibilidade. Esses processos, apoiados por sistemas de inteligência artificial, garantem que os usuários recebam uma experiência única e imersiva na plataforma.
 
-\newpage
+
+
+\subsubsection{Subsistema de Dados e Análise}
+
+O subsistema de dados e análise é responsável pela coleta, processamento e análise dos dados gerados pelas interações dos usuários na plataforma.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{Relatório/Figuras/Desempenho_video1.jpg}
+    \caption{Tela de Análise de Desempenho de Vídeo}
+    \label{fig:enter-label} 
+\end{figure}
+
+
 \subsection{Fronteiras do Sistemas}
 
-\newpage
+
+
+
+
 \subsection{Retroalimentação do Sistema}
 
 A  retroalimentação é primordial para o bom funcionamento dos sistemas, e no tiktok  por conta de seu algoritmo de recomendação existem dois tipos de retroalimentações, sendo a positiva(ocorre quando uma ação no sistema gera uma resposta que reforça ou amplifica esse comportamento, tornando-o mais frequente) e negativa (acontece quando uma ação no sistema gera uma resposta que reduz ou limita determinado comportamento), na positiva destacam-se:
@@ -106,7 +184,7 @@ O algoritmo aprende o que mantém os usuários assistindo por mais tempo e ajust
 Se um vídeo recebe muitas interações logo após ser postado, ele entra na aba "Para Você" demais usuários, aumentando ainda mais sua visibilidade.
 \end{itemize}
 
-\newpage
+
 Com isso, a retroalimentação positiva do TikTok impulsiona a viralização de vídeos, tendências e engajamento, tornando a plataforma dinâmica e viciante para os usuários.\vskip0.3cm
 
 Já na retroalimentação negativa no TikTok, como destacada anteriormente, ocorre quando uma ação gera uma resposta que reduz, limita ou corrige determinado comportamento, evitando excessos e equilibrando o sistema; assim, nessa retroalimentação destacam-se:
@@ -141,4 +219,4 @@ Assim, podemos analisar que ambas as retroalimentações são fundamentais para 
 
 
 
-\subsection{Interdepenências}
+\subsection{Interdepenências com Outros Sistemas}
